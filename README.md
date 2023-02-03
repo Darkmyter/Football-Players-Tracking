@@ -63,7 +63,7 @@ Here are the results on the validation dataset:
 
 ## Tracking the players with ByteTrack
 
-The second part is running yolo inference on each frame of the video and then track the detections with ByteTrack: [Tracking notebook]()
+The second part is running yolo inference on each frame of the video and then track the detections with ByteTrack: [Tracking notebook](track_players_with_bytetrack_yolov8.ipynb)
 
 
 ## YOlOv8 explained
