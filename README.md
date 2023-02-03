@@ -21,7 +21,7 @@ For the data, we use videos from the [DFL - Bundesliga Data Shootout](https://ww
 
 ## DEMO
 
-[![]()](https://youtu.be/7bFXjk8wYs0)
+[![demo-video](resources/video_thumbnail.jpg)](https://youtu.be/7bFXjk8wYs0)
 
 
 ## YOLOv8 training
