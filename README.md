@@ -7,7 +7,7 @@ For the data, we use videos from the [DFL - Bundesliga Data Shootout](https://ww
 
 
 ## Table of content <!-- omit from toc -->
-- [DEMO](#demo)
+- [YouTube Video Demo](#youtube-video-demo)
 - [YOLOv8 training](#yolov8-training)
   - [YOLO8m results](#yolo8m-results)
   - [YOLO8l results](#yolo8l-results)
@@ -19,10 +19,9 @@ For the data, we use videos from the [DFL - Bundesliga Data Shootout](https://ww
   - [The loss](#the-loss)
 - [ByteTrack explained](#bytetrack-explained)
 
-## DEMO
+## YouTube Video Demo
 
 [![demo-video](resources/video_thumbnail.jpg)](https://youtu.be/7bFXjk8wYs0)
-
 
 ## YOLOv8 training
 
