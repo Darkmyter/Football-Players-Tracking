@@ -65,6 +65,8 @@ Here are the results of training on the validation dataset:
 The second part is running yolo inference on each frame of the video and then track the detections with ByteTrack: [Tracking notebook](track_players_with_bytetrack_yolov8.ipynb).  
 ByteTrack works well when no others are nearby and loses the idendity of the players if they form a cluster. This is one of the challenges of object tracking.
 
+The accuracy of the tracking depends heavily on yolo performance. Training on a large dataset would enhance the this solution.
+
 
 ## YOlOv8 explained
 
