@@ -103,7 +103,6 @@ The loss function is as follows:
 $$
 \begin{gathered}
 loss = \lambda_1 L_{box} + \lambda_2 L_{cls} + \lambda_3 L_{dfl} \\
-
 \end{gathered}
 $$
 
