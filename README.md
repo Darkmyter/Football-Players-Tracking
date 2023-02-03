@@ -116,10 +116,13 @@ The $L_{box}$ is CIoU loss, it aims to:
 
 
 The CIoU loss function can be defined as
+
 $$
 \mathcal{L}_{C I o U}=1-I o U+\frac{\rho^2\left(b, b^{g t}\right)}{c^2}+\alpha v .
 $$
+
 where $b$ and $b^{gt}$ denote the central points of prediction and of ground truth, $\rho$ is the Euclidean distance, and $c$ is the diagonal length of the smallest enclosing box covering the two boxes. The trade-off parameter $\alpha$ is defined as
+
 $$
 \alpha=\frac{v}{(1-I o U)+v}
 $$
