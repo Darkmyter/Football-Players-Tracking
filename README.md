@@ -9,8 +9,6 @@ For the data, we use videos from the [DFL - Bundesliga Data Shootout](https://ww
 ## Table of content <!-- omit from toc -->
 - [YouTube Video Demo](#youtube-video-demo)
 - [YOLOv8 training](#yolov8-training)
-  - [YOLO8m results](#yolo8m-results)
-  - [YOLO8l results](#yolo8l-results)
 - [Tracking the players with ByteTrack](#tracking-the-players-with-bytetrack)
 - [YOlOv8 explained](#yolov8-explained)
   - [The Backbone](#the-backbone)
@@ -29,9 +27,12 @@ The first part of the project is to train YOLOv8 on detecting players in images:
 
 The model has trouble detecting the ball due to its small size. One of the solutions is to increase the network resolution to 1280x1280. However, it requires resources beyond my reach.
 
-Here are the results of training on the validation dataset:
+<!-- YOlOv8 has been released recently and still has questionable performances compared to [YOLOv5](https://github.com/ultralytics/yolov5).  -->
 
-### YOLO8m results
+
+<details><summary>Performance on validation set</summary>
+
+YOLO8m results
 
 | class      | Number of images | Number of instances | Precision | Recall | mAP50 | mAP50-95 |
 |------------|------------------|---------------------|-----------|--------|---------|----------|
@@ -41,7 +42,7 @@ Here are the results of training on the validation dataset:
 | player     | 38               | 754                 | 0.953     | 0.964  | 0.986   | 0.796    |
 | referee    | 38               | 89                  | 0.938     | 0.888  | 0.942   | 0.637    |
 
-### YOLO8l results
+YOLO8l results
 
 | class      | Number of images | Number of instances | Precision | Recall | mAP50 | mAP50-95 |
 |------------|------------------|---------------------|-----------|--------|---------|----------|
@@ -51,6 +52,7 @@ Here are the results of training on the validation dataset:
 | player     | 38               | 754                 | 0.981     | 0.958  | 0.983   | 0.814    |
 | referee    | 38               | 89                  | 0.956     | 0.921  | 0.963   | 0.679    |
 
+</details>
 
 
 <!-- <div align="center">
@@ -68,7 +70,7 @@ ByteTrack works well when no others are nearby and loses the idendity of the pla
 The accuracy of the tracking depends heavily on yolo performance. Training on a large dataset would enhance the this solution.
 
 
-## YOlOv8 explained
+## YOlOv8 explained 
 
 YOlOv8 is a single-stage object detector, meaning one network is responsible for predicting the bounding boxes and classifying them. The YOLO series of algorithms are known for their low inference time.  
 The network is built of three sections: the backbone, the neck and the head. In figure bellow, we see the full details of the network.
@@ -134,7 +136,6 @@ v=\frac{4}{\pi}\left(\arctan \frac{w^{g t}}{h^{g t}}-\arctan \frac{w}{h}\right)^
 $$
 
 The $L_{dfl}$ is distributional focal loss.
-
 
 ## ByteTrack explained
 
