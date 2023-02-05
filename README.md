@@ -19,20 +19,26 @@ For the data, we use videos from the [DFL - Bundesliga Data Shootout](https://ww
 
 ## YouTube Video Demo
 
-[![demo-video](resources/video_thumbnail.jpg)](https://youtu.be/7bFXjk8wYs0)
+YOLOv8l 640 + ByteTrack: [video](https://youtu.be/Dusfc9dBWL8).  
+YOLOv8m 1280 + ByteTrack: [video]()
+
+![screenshot](resources/video_thumbnail.jpg)
+
+<!-- [![demo-video](resources/video_thumbnail.jpg)](https://youtu.be/7bFXjk8wYs0) -->
 
 ## YOLOv8 training
 
 The first part of the project is to train YOLOv8 on detecting players in images: [Training notebook](train_yolov8_football_players.ipynb). The model was trained for 300 epochs on 204 images with a resolution of 640x640.
 
-The model has trouble detecting the ball due to its small size. One of the solutions is to increase the network resolution to 1280x1280. However, it requires resources beyond my reach.
+The model has trouble detecting the ball due to its small size. One of the solutions is to increase the network resolution to 1280x1280. However, it requires resources beyond my reach.  
+The alternative was to train a YOLOv5m on 1280 resolution. Evaluation tables bellow show that has 60% better mAP50-95. However, it confuses the referees and players more often (as seen on the demo video).
 
 <!-- YOlOv8 has been released recently and still has questionable performances compared to [YOLOv5](https://github.com/ultralytics/yolov5).  -->
 
 
-<details><summary>Performance on validation set</summary>
+<!-- <details><summary>Performance on validation set</summary> -->
 
-YOLO8m results
+YOLO8m 640 results
 
 | class      | Number of images | Number of instances | Precision | Recall | mAP50 | mAP50-95 |
 |------------|------------------|---------------------|-----------|--------|---------|----------|
@@ -42,7 +48,7 @@ YOLO8m results
 | player     | 38               | 754                 | 0.953     | 0.964  | 0.986   | 0.796    |
 | referee    | 38               | 89                  | 0.938     | 0.888  | 0.942   | 0.637    |
 
-YOLO8l results
+YOLO8l 640 results
 
 | class      | Number of images | Number of instances | Precision | Recall | mAP50 | mAP50-95 |
 |------------|------------------|---------------------|-----------|--------|---------|----------|
@@ -52,7 +58,17 @@ YOLO8l results
 | player     | 38               | 754                 | 0.981     | 0.958  | 0.983   | 0.814    |
 | referee    | 38               | 89                  | 0.956     | 0.921  | 0.963   | 0.679    |
 
-</details>
+Yolov5m 1280 results
+
+| class      | Number of images | Number of instances | Precision | Recall | mAP50 | mAP50-95 |
+|------------|----|-----|-------|-------|-------|-------|
+| all        | 38 | 905 | 0.909 | 0.862 | 0.892 | 0.675 |
+| ball       | 38 | 35  | 0.953 | **0.58**  | **0.653** | **0.335** |
+| goalkeeper | 38 | 27  | 0.803 | 0.908 | 0.954 | 0.786 |
+| player     | 38 | 754 | 0.978 | 0.983 | 0.993 | 0.864 |
+| referee    | 38 | 89  | 0.902 | 0.978 | 0.969 | 0.717 |
+
+<!-- </details> -->
 
 
 <!-- <div align="center">
