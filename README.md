@@ -20,7 +20,7 @@ For the data, we use videos from the [DFL - Bundesliga Data Shootout](https://ww
 ## YouTube Video Demo
 
 YOLOv8l 640 + ByteTrack: [video](https://youtu.be/Dusfc9dBWL8).  
-YOLOv8m 1280 + ByteTrack: [video]()
+YOLOv8m 1280 + ByteTrack: [video](https://youtu.be/M4_laY3VsF4)
 
 ![screenshot](resources/video_thumbnail.jpg)
 
