@@ -1,4 +1,4 @@
-# Track football payers with YOlOv8 and ByteTrack <!-- omit from toc -->
+# Track football players with YOlOv8 and ByteTrack <!-- omit from toc -->
 
 
 Football automated analytics is hot topics in the intersection between AI and sports. In this project, we build a tool for detecting and tracking football players, referees and ball in videos. For this we use [YOLOv8](https://github.com/ultralytics/ultralytics) (the latest version of the popular and fast object detector) for detecting the players in each frame of the video, and [ByteTrack](https://github.com/ifzhang/ByteTrack) a multi object detection model released in 2022 to identify the players and track their trajectory.
