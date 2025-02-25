@@ -78,6 +78,8 @@ Yolov5m 1280 results
 | *YOLOv8 training losses plots* |
 </div> -->
 
+You can download my training weights here: [Drive](https://drive.google.com/drive/folders/1-1r2psRgW7JRSEykRmvUYEY31ufuxiDb?usp=sharing)
+
 ## Tracking the players with ByteTrack
 
 The second part is running yolo inference on each frame of the video and then track the detections with ByteTrack: [Tracking notebook](track_players_with_bytetrack_yolov8.ipynb).  
